@@ -1,6 +1,6 @@
-#Image Processor
+# Image Processor
 Can apply three filters BLUR, EDGE DETECTION and NEGATIVE on any size of input image whether large or small. You just have to give parameters LINE WIDTH, LINE HEIGHT, KERNEL SIZE and FILTER MODE, you can know more about them by analyzing testbench (tb1.v).
 
-##How to run the project 
+## How to run the project 
 To run the project, you need to clone this repository into your local machine, which should have Vivado installed, this project is built on Vivado 2018.2. After cloning you can see the file named "Image_processing.xpr" in the Vivado_Project_Folder, just double click the file and it will open the project in vivado. In order to give input image, you first need to Run Simulation of the project without giving input image. After simulation completed, during simulation Vivado will generate many different folders and files for simulation or for other purposes in the project folder. "Path_to_Project_Folder\Image_processing.sim\sim_1\behav\xsim" this folder will be generated as well and this is the folder in which we can give our input image in .bmp, so just put the input image here and again Run Simulation and when the simulation stops enter "run all" in tcl and after that when the simulation completes you can see the output filtered image here in the same folder where you gave your input image.
 
