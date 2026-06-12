@@ -27,8 +27,8 @@ module tb;
     parameter LINE_WIDTH = 640;
     parameter LINE_HEIGHT = 480;
 
-    parameter KERNEL_SIZE = 3;  // Make this changeable
-    parameter integer FILTER_MODE = 2;
+    parameter KERNEL_SIZE = 3;  // Any filter size can be selected e.g; 5 7 9 and so on, for blur filter but for edge detection and negative filter only write Kernel size 3
+    parameter integer FILTER_MODE = 1; // Filter Mode has three values 0,1 and 2, if 0 is given the blur filter will be applied, on 1 edge detection will be applied and on 2 negative will be applied
 
     localparam IMAGE_SIZE = LINE_WIDTH * LINE_HEIGHT;
     localparam OUT_PIXELS = (LINE_WIDTH)*(LINE_HEIGHT);
@@ -63,7 +63,7 @@ module tb;
         #100;
 
         file  = $fopen("640x480.bmp","rb");
-        file1 = $fopen("neg_640x480.bmp","wb");
+        file1 = $fopen("edge_640x480.bmp","wb");
 
         // Copy BMP header
         for(i=0;i<`headerSize;i=i+1) begin
